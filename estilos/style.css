@@ -21,6 +21,12 @@ main {
     position: relative;
 }
 
+#cabecalho h1 {
+  margin-bottom: 5px;
+  font-weight: bold;
+  transition: font-size 0.3s ease;
+}
+
 /* Simulação de smartphone */
 #telefone {
     width: 300px;

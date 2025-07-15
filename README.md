@@ -25,7 +25,7 @@ Visualize de forma animada e interativa suas redes sociais simuladas dentro de u
 
 ## 📸 Screenshots
 
-![Projeto em execução](imagens/screenshot-exemplo.png)
+![Projeto em execução](imagens/projeto-em-execucao.png)
 
 ## 🧑‍💻 Autor
 
