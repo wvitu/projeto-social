@@ -28,7 +28,7 @@ main {
     background: url('../imagens/frame-iphone.png') no-repeat center center;
     background-size: contain;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 iframe#tela {
@@ -97,10 +97,6 @@ iframe#tela {
   z-index: 0;
 }
 
-main, header, #redes-sociais {
-  position: relative;
-  z-index: 1;
-}
 
 @keyframes animate {
     0%{
