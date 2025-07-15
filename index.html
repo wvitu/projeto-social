@@ -15,11 +15,12 @@
 
 
   <header id="cabecalho">
-    <div class="topo-mensagem animate__animated animate__fadeInDown">
-      <h1>Bem-vindo!</h1>
-      <p>Clique em uma rede social para visualizar o conteúdo.</p>
-    </div>
-  </header>
+  <div class="topo-mensagem animate__animated animate__fadeInDown" id="mensagemTopo">
+    <h1 id="tituloTopo">Bem-vindo!</h1>
+    <p>Clique em uma rede social para visualizar o conteúdo.</p>
+  </div>
+</header>
+
 
   <main>
     <section id="telefone">
@@ -35,5 +36,33 @@
       <a href="linkedin.html" target="tela" title="LinkedIn"><img src="imagens/logo-linkedin.png" alt="LinkedIn"></a>
     </nav>
   </main>
+  <footer id="rodape">
+  <p>Desenvolvido por <strong>Wanderson Vitor</strong> · <a href="https://github.com/wvitu" target="_blank">GitHub</a></p>
+</footer>
+
+  <script>
+  // Animação ao entrar na página
+  window.addEventListener('load', () => {
+    const titulo = document.getElementById('tituloTopo');
+    titulo.classList.add('animate__animated', 'animate__pulse');
+    titulo.style.fontSize = '24px';
+    setTimeout(() => {
+      titulo.classList.remove('animate__pulse');
+      titulo.style.fontSize = '18px';
+    }, 2000);
+  });
+
+  // Repetir animação ao clicar em "Home"
+  document.querySelector('a[href="home.html"]').addEventListener('click', () => {
+    const titulo = document.getElementById('tituloTopo');
+    titulo.classList.add('animate__pulse');
+    titulo.style.fontSize = '24px';
+    setTimeout(() => {
+      titulo.classList.remove('animate__pulse');
+      titulo.style.fontSize = '18px';
+    }, 2000);
+  });
+</script>
+
 </body>
 </html>
