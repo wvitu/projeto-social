@@ -14,12 +14,13 @@
 </ul>
 
 
-  <header id="cabecalho">
+<header id="cabecalho">
   <div class="topo-mensagem animate__animated animate__fadeInDown" id="mensagemTopo">
     <h1 id="tituloTopo">Bem-vindo!</h1>
     <p>Clique em uma rede social para visualizar o conteúdo.</p>
   </div>
 </header>
+
 
 
   <main>
@@ -40,29 +41,27 @@
   <p>Desenvolvido por <strong>Wanderson Vitor</strong> · <a href="https://github.com/wvitu" target="_blank">GitHub</a></p>
 </footer>
 
-  <script>
-  // Animação ao entrar na página
-  window.addEventListener('load', () => {
-    const titulo = document.getElementById('tituloTopo');
-    titulo.classList.add('animate__animated', 'animate__pulse');
-    titulo.style.fontSize = '24px';
-    setTimeout(() => {
-      titulo.classList.remove('animate__pulse');
-      titulo.style.fontSize = '18px';
-    }, 2000);
+ <script>
+  const titulo = document.getElementById('tituloTopo');
+
+  // Define estilo inicial ampliado
+  titulo.style.fontSize = '72px';
+
+  // Quando clica em Home: mantém grande
+  document.querySelector('a[href="home.html"]').addEventListener('click', () => {
+    titulo.style.fontSize = '52px';
   });
 
-  // Repetir animação ao clicar em "Home"
-  document.querySelector('a[href="home.html"]').addEventListener('click', () => {
-    const titulo = document.getElementById('tituloTopo');
-    titulo.classList.add('animate__pulse');
-    titulo.style.fontSize = '24px';
-    setTimeout(() => {
-      titulo.classList.remove('animate__pulse');
-      titulo.style.fontSize = '18px';
-    }, 2000);
+  // Quando clica em qualquer outro link: diminui
+  document.querySelectorAll('#redes-sociais a').forEach(link => {
+    if (link.getAttribute('href') !== 'home.html') {
+      link.addEventListener('click', () => {
+        titulo.style.fontSize = '28px';
+      });
+    }
   });
 </script>
+
 
 </body>
 </html>
