@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<style>
-    *{
-        margin: 0px;
-        padding: 0px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
     body {
-        width: 100vw;
-        height: 100vh;
-        background: black url('imagens/tela-home.jpg') no-repeat top center;
-        background-size: cover;
+      background: black url('imagens/tela-home.jpg') no-repeat top center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      font-family: Arial, sans-serif;
     }
-</style>
+    h1, p {
+      text-shadow: 0 0 5px black;
+    }
+  </style>
+</head>
 <body>
-    
+  <h1 class="animate__animated animate__fadeInDown">Bem-vindo!</h1>
+  <p class="animate__animated animate__fadeInUp">Clique em uma rede social para visualizar o conteúdo.</p>
 </body>
 </html>
