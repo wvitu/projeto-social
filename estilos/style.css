@@ -1,61 +1,70 @@
-@charset "UTF-8";
-
+/* Reset básico */
 * {
-    margin: 0px;
-    padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-html, body {
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
-}
-
-body {
-    background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-main {
-    position: relative;
-    height: 100vh;
-    }
-
-section#telefone {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 627px;
-    width: 311px;
-    
-    background: url('../imagens/frame-iphone.png') no-repeat;
-}
-
-iframe#tela {
-    position: relative;
-    top: 80px;
-    left: 22px;
-    width: 267px;
-    height: 471px;
-}
-
-section#redes-sociais{
-    text-align: right;
-}
-section#redes-sociais img {
-    width: 50px;
-    margin: 10px;
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(71, 22, 22, 0.705);
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-section#redes-sociais img:hover {
-    border: 2px solid rgba(38, 178, 221, 0.637);
-    transform: translate(-3px, -3px);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.623);
-    transition: transform 0.3s, border 1s;
+/* Fundo */
+body {
+    background: url('../imagens/fundo-madeira.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+/* Layout principal */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Simulação de smartphone */
+#telefone {
+    width: 300px;
+    height: 600px;
+    background: url('../imagens/frame-iphone.png') no-repeat center center;
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+}
+
+iframe#tela {
+    width: 250px;
+    height: 445px;
+    position: absolute;
+    top: 78px;
+    left: 24px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Ícones laterais */
+#redes-sociais {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 2;
+}
+
+#redes-sociais a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #fff;
+}
+
+#redes-sociais a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
